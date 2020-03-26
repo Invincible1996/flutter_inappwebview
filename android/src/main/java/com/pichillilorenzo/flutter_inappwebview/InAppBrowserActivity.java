@@ -57,6 +57,10 @@ public class InAppBrowserActivity extends AppCompatActivity {
     setContentView(R.layout.activity_web_view);
 
     webView = findViewById(R.id.webView);
+
+    //设置LocalStorage可用
+    webView.getSettings().setDomStorageEnabled(true);
+
     webView.inAppBrowserActivity = this;
 
     Bundle b = getIntent().getExtras();
